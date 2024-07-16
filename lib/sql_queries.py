@@ -21,15 +21,23 @@ SELECT
        bears.age 
 FROM bears 
 WHERE alive
-ORDER BY age ;
+ORDER BY age ASC;
 
 """
 
 select_oldest_bear_and_returns_name_and_age = """
-SELECT name, age FROM bears ORDER BY age DESC LIMIT 1;
+SELECT 
+      bears.name,
+      bears.age 
+FROM bears 
+ORDER BY age DESC LIMIT 1;
 
 """
 select_youngest_bear_and_returns_name_and_age = """
-SELECT name, age FROM bears ORDER BY age ASC LIMIT 1;
+SELECT 
+      bears.name, 
+      bears.age 
+FROM bears 
+ORDER BY age ASC LIMIT 1;
 
 """
